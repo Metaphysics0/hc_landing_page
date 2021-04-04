@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20rem;
+    li {
+      margin: 0 2.75rem;
+      font-size: 1.5rem;
+      a {
+        text-decoration: none;
+        color: #767169;
+        transition: color 0.3s;
+        &:hover {
+          color: #e9ab2b;
+        }
+      }
+    }
+  }
+  &__logo {
+    font-size: 3rem;
+  }
+  &__search {
+    border-radius: 100px;
+    width: 35rem;
+    border: none;
+    outline: none;
+    padding: 1.25rem 3rem;
+    font-size: 1.5rem;
+  }
+}

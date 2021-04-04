@@ -1,0 +1,31 @@
+// HERO SECTION
+.hero {
+  display: grid;
+  grid-template-columns: 3fr 6fr 2fr;
+  grid-template-areas: 'hero-left hero-center hero-right';
+  gap: 1rem;
+  &__left {
+    grid-area: hero-left;
+  }
+  &__center {
+    grid-area: hero-center;
+    width: 77rem;
+  }
+  &__right {
+    grid-area: hero-right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    video {
+      width: 10rem;
+      outline: none;
+    }
+    a {
+      font-size: 1.75rem;
+      font-weight: 600;
+      border-bottom: 1px solid #4e747a;
+      text-decoration: none;
+      color: #4e747a;
+    }
+  }
+}

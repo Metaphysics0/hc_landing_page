@@ -1,0 +1,17 @@
+.btn {
+  &--hero {
+    padding: 1.75rem 2rem;
+    width: 17rem;
+    background: #000000;
+    color: #fff;
+    border: none;
+    font-family: 'Open Sans';
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: #e9ab2b;
+    }
+  }
+}

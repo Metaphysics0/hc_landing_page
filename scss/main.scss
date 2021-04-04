@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@font-face {
+  font-family: 'Flink Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Flink Regular'), url('../fonts/FlinkRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Flink Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Flink Medium'), url('../fonts/FlinkMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Flink Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Flink Medium Italic'), url('../fonts/FlinkMediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Flink Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Flink Bold'), url('../fonts/FlinkBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Flink Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Flink Black'), url('../fonts/FlinkBlack.woff') format('woff');
+}
+
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/navbar';
+@import './components/button';
+
+@import './layout/grid';
+@import './pages/home';
