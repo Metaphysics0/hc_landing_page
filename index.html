@@ -1,10 +1,52 @@
 <!DOCTYPE html>
+<!--
+
+          .
+        ('
+        '|
+        |'
+       [::]
+       [::]   _......_
+       [::].-'      _.-`.
+       [:.'    .-. '-._.-`.
+       [/ /\   |  \        `-..
+       / / |   `-.'      .-.   `-.
+      /  `-'            (   `.    `.
+     |           /\      `-._/      \
+     '    .'\   /  `.           _.-'|
+    /    /  /   \_.-'        _.':;:/
+  .'     \_/             _.-':;_.-'
+ /   .-.             _.-' \;.-'
+/   (   \       _..-'     |
+\    `._/  _..-'    .--.  |
+ `-.....-'/  _ _  .'    '.|
+          | |_|_| |      | \  (o)
+     (o)  | |_|_| |      | | (\'/)
+    (\'/)/  ''''' |     o|  \;:;
+     :;  |        |      |  |/)
+      ;: `-.._    /__..--'\.' ;:
+          :;  `--' :;   :;
+
+
+  Designed with Love
+  Ryan Roberts
+  https://ryanroberts.dev
+  https://www.linkedin.com/in/ryanroberts0/
+  @positiveryan 
+
+
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>HumbleCompass</title>
   </head>
   <body>
@@ -26,27 +68,57 @@
       />
     </nav>
     <!-- HERO SECTION -->
+
     <main class="hero">
       <div class="hero__left">
         <div>
-          <h1 class="heading heading--primary mb-2">Find your best network</h1>
+          <h1 class="heading heading--primary mb-2">Find your new passion</h1>
           <p class="subheading subheading--hero mb-4">
-            Networking is the best way to find a job, it's easier than you think.
+            Visiting new restaurants are the best way to get to know a city.
           </p>
         </div>
         <button class="btn btn--hero">Try for free</button>
       </div>
-      <img src="./img/cropped.gif" alt="walking" class="hero__center" />
+      <!-- SAPIENS Start -->
+      <script src="./js/pre.js"></script>
+      <div id="lottie" class="hero__center"></div>
+      <script src="./js/post.js"></script>
+      <!-- SAPIENS end -->
       <div class="hero__right">
         <div>
-          <h4 class="subheading subheading--secondary mb-1">Professionally with the best.</h4>
+          <h4 class="subheading subheading--secondary mb-1">Customer driven ratings.</h4>
           <a href="#">Read More.</a>
         </div>
-        <video autoplay loop>
-          <source src="./img/compass.mov" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <img src="./img/compass.svg" alt="cpas" />
       </div>
     </main>
+
+    <!-- TESTIMONIALS -->
+    <section class="article">
+      <div class="article__left">
+        <img src="./img/head.png" alt="profile" />
+        <h3 class="subheading subheading--article">
+          Introducing <br />
+          Fractional <br />
+          Shares
+        </h3>
+      </div>
+      <div class="article__right">
+        <article>
+          <h4 class="number-text">10X</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, accusantium! Dolore a
+            nam unde cupiditate.
+          </p>
+        </article>
+        <article>
+          <h4 class="number-text">50%</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, accusantium! Dolore a
+            nam unde cupiditate.
+          </p>
+        </article>
+      </div>
+    </section>
   </body>
 </html>

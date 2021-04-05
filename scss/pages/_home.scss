@@ -1,7 +1,7 @@
-// HERO SECTION
+// #################### HERO SECTION ####################
 .hero {
   display: grid;
-  grid-template-columns: 3fr 6fr 2fr;
+  grid-template-columns: 3.25fr 6fr 2fr;
   grid-template-areas: 'hero-left hero-center hero-right';
   gap: 1rem;
   &__left {
@@ -9,16 +9,17 @@
   }
   &__center {
     grid-area: hero-center;
-    width: 77rem;
   }
   &__right {
     grid-area: hero-right;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    video {
-      width: 10rem;
+    img {
+      width: 15rem;
       outline: none;
+      animation: spin 7s ease-in-out infinite;
+      margin-bottom: 7rem;
     }
     a {
       font-size: 1.75rem;
@@ -26,6 +27,47 @@
       border-bottom: 1px solid #4e747a;
       text-decoration: none;
       color: #4e747a;
+    }
+  }
+}
+@media only screen and (max-width: 77em) {
+  .hero {
+    grid-template-columns: 2fr 2.75fr;
+    grid-template-areas: 'hero-left hero-center';
+    &__right {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 55em) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 3fr;
+    grid-template-areas:
+      'hero-left'
+      'hero-center';
+    &__left {
+      text-align: center;
+    }
+  }
+}
+
+// ################ TESTIMONIALS SECTION ################
+.article {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 35%;
+    img {
+      width: 10rem;
+      border-radius: 50%;
+    }
+  }
+  &__right {
+    display: flex;
+    article {
+      display: flex;
+      align-items: center;
     }
   }
 }

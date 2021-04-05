@@ -31,6 +31,8 @@
   font-weight: normal;
   src: local('Flink Black'), url('../fonts/FlinkBlack.woff') format('woff');
 }
+@import './abstracts/variables';
+@import './abstracts/animations';
 
 @import './base/base';
 @import './base/typography';
