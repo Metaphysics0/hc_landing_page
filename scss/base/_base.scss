@@ -19,6 +19,11 @@ body {
   padding: 5rem 7rem;
 }
 
+::selection {
+  background-color: #e9ab2b;
+  color: white;
+}
+
 @media only screen and (max-width: 77em) {
   body {
     padding: 3rem;

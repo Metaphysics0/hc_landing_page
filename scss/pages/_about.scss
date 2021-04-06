@@ -1,0 +1,22 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas:
+    'about-top about-top'
+    'about-left about-right';
+  &__top {
+    grid-area: about-top;
+    text-align: center;
+  }
+  &__left {
+    grid-area: about-left;
+  }
+  &__right {
+    grid-area: about-right;
+    padding: 4rem;
+  }
+  div {
+    margin-bottom: 2rem;
+  }
+}

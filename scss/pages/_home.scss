@@ -4,11 +4,19 @@
   grid-template-columns: 3.25fr 6fr 2fr;
   grid-template-areas: 'hero-left hero-center hero-right';
   gap: 1rem;
+  height: 90vh;
   &__left {
     grid-area: hero-left;
+    z-index: 999;
   }
   &__center {
     grid-area: hero-center;
+    svg {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      z-index: -999;
+    }
   }
   &__right {
     grid-area: hero-right;
@@ -56,11 +64,15 @@
 .article {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20rem;
   &__left {
     width: 35%;
     img {
       width: 10rem;
+      border: 2px solid white;
       border-radius: 50%;
+      box-shadow: var(--shadow-dreamy);
+      margin-bottom: 2rem;
     }
   }
   &__right {
@@ -68,6 +80,7 @@
     article {
       display: flex;
       align-items: center;
+      padding: 0 4rem;
     }
   }
 }

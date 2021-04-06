@@ -3,6 +3,10 @@
   line-height: 1.08;
   font-family: 'Flink Black', sans-serif;
   font-size: 9rem;
+  &--secondary {
+    font-size: 6rem;
+    font-weight: 700;
+  }
 }
 .subheading {
   font-weight: 500;
@@ -23,8 +27,19 @@
     font-size: 2rem;
     font-weight: 800;
   }
+  &--about {
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+  }
 }
 .number-text {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 7rem;
+  font-size: 7.25rem;
+  margin-right: 2rem;
+}
+.p-text {
+  line-height: 1.5;
+  font-size: 1.75rem;
+  color: #767169;
+  font-weight: 500;
 }

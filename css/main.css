@@ -34,6 +34,18 @@
   src: local("Flink Black"), url("../fonts/FlinkBlack.woff") format("woff");
 }
 
+:root {
+  --shadow-diffuse: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+  --shadow-dreamy: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+    0 32px 64px rgba(0, 0, 0, 0.07);
+  --shadow-shorter: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
+  --shadow-longer: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+    0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09), 0 32px 16px rgba(0, 0, 0, 0.09);
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -80,6 +92,16 @@ body {
   padding: 5rem 7rem;
 }
 
+::-moz-selection {
+  background-color: #e9ab2b;
+  color: white;
+}
+
+::selection {
+  background-color: #e9ab2b;
+  color: white;
+}
+
 @media only screen and (max-width: 77em) {
   body {
     padding: 3rem;
@@ -91,6 +113,11 @@ body {
   line-height: 1.08;
   font-family: 'Flink Black', sans-serif;
   font-size: 9rem;
+}
+
+.heading--secondary {
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 .subheading {
@@ -117,9 +144,22 @@ body {
   font-weight: 800;
 }
 
+.subheading--about {
+  line-height: 1.2;
+  margin-bottom: 1.75rem;
+}
+
 .number-text {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 7rem;
+  font-size: 7.25rem;
+  margin-right: 2rem;
+}
+
+.p-text {
+  line-height: 1.5;
+  font-size: 1.75rem;
+  color: #767169;
+  font-weight: 500;
 }
 
 .radial-gradient {
@@ -150,6 +190,11 @@ body {
   margin-bottom: 5rem;
 }
 
+.ctr-btn {
+  display: inherit;
+  margin: 0 auto;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,6 +203,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 5rem;
+  z-index: 999;
 }
 
 .nav ul {
@@ -173,7 +219,7 @@ body {
 
 .nav ul li {
   margin: 0 2.75rem;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
 }
 
 .nav ul li a {
@@ -198,6 +244,13 @@ body {
   outline: none;
   padding: 1.25rem 3rem;
   font-size: 1.5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav__search:hover, .nav__search:focus {
+  -webkit-box-shadow: var(--shadow-shorter);
+          box-shadow: var(--shadow-shorter);
 }
 
 @media only screen and (max-width: 77em) {
@@ -237,18 +290,27 @@ body {
       grid-template-columns: 3.25fr 6fr 2fr;
       grid-template-areas: 'hero-left hero-center hero-right';
   gap: 1rem;
+  height: 90vh;
 }
 
 .hero__left {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: hero-left;
+  z-index: 999;
 }
 
 .hero__center {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: hero-center;
+}
+
+.hero__center svg {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: -999;
 }
 
 .hero__right {
@@ -314,6 +376,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20rem;
 }
 
 .article__left {
@@ -322,7 +385,11 @@ body {
 
 .article__left img {
   width: 10rem;
+  border: 2px solid white;
   border-radius: 50%;
+  -webkit-box-shadow: var(--shadow-dreamy);
+          box-shadow: var(--shadow-dreamy);
+  margin-bottom: 2rem;
 }
 
 .article__right {
@@ -338,5 +405,41 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 4rem;
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 0.2fr 1fr;
+      grid-template-rows: 0.2fr 1fr;
+      grid-template-areas: 'about-top about-top' 'about-left about-right';
+}
+
+.about__top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: about-top;
+  text-align: center;
+}
+
+.about__left {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: about-left;
+}
+
+.about__right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: about-right;
+  padding: 4rem;
+}
+
+.about div {
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
