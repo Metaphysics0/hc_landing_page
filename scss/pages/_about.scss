@@ -5,6 +5,7 @@
   grid-template-areas:
     'about-top about-top'
     'about-left about-right';
+  padding: 10rem 0;
   &__top {
     grid-area: about-top;
     text-align: center;

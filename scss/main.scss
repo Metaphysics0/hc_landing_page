@@ -32,6 +32,7 @@
   src: local('Flink Black'), url('../fonts/FlinkBlack.woff') format('woff');
 }
 @import './abstracts/variables';
+@import './abstracts/mixins';
 @import './abstracts/animations';
 
 @import './base/base';

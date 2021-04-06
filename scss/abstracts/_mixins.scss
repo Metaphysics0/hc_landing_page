@@ -1,0 +1,5 @@
+@mixin calc-5 {
+  width: calc(100% - 5rem);
+  margin-left: auto;
+  margin-right: auto;
+}
