@@ -60,18 +60,21 @@
     <nav class="nav">
       <h3 class="nav__logo">Humble.</h3>
       <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/features">Features</a></li>
-        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="/download">Download</a></li>
       </ul>
-      <input
-        placeholder="Search Here..."
-        class="nav__search"
-        type="text"
-        name="search"
-        id="search"
-      />
+      <form id="navSearch" class="input-icon">
+        <input
+          placeholder="Search Here..."
+          class="nav__search"
+          type="text"
+          name="search"
+          id="search"
+        />
+        <i class="fas fa-search"></i>
+      </form>
     </nav>
     <!-- HERO SECTION -->
 
@@ -128,7 +131,7 @@
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__top">
         <h2 class="heading heading--secondary">Our mission statement</h2>
       </div>
@@ -158,7 +161,7 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="features">
+    <section class="features" id="features">
       <h3 class="heading heading--secondary ctr-txt mb-8">What we offer</h3>
       <div class="features__cards">
         <article>
@@ -186,32 +189,72 @@
           </p>
         </article>
       </div>
+      <aside class="logos">
+        <img src="./img/logos/certified-vegan.png" alt="certified-vegan" />
+        <img src="./img/logos/happy-cow.svg" alt="certified-vegan" />
+        <img src="./img/logos/vf-2.png" alt="certified-vegan" />
+        <img src="./img/logos/so-delicious.png" alt="certified-vegan" />
+        <img src="./img/logos/vegan-symbol.png" alt="certified-vegan" />
+      </aside>
     </section>
 
     <!-- REVIEWS -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <h2 class="heading heading--secondary ctr-txt mb-4">Here's what customers have said</h2>
-
       <div class="review mb-4">
         <img src="./img/head.png" alt="head" class="review__img" />
         <div class="review__text">
           <h3 class="subheading subheading--teritary mb-1">HumbleCompass changed my life</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium quaerat culpa
-            saepe incidunt distinctio deserunt voluptatibus eveniet numquam earum?
+            saepe incidunt distinctio deserunt voluptatibus eveniet numquam earum? - Josh Hoffman
+            (CEO of IZZY)
           </p>
         </div>
       </div>
-
+      <div class="review mb-4">
+        <img src="./img/head.png" alt="head" class="review__img" />
+        <div class="review__text">
+          <h3 class="subheading subheading--teritary mb-1">HumbleCompass changed my life</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium quaerat culpa
+            saepe incidunt distinctio deserunt voluptatibus eveniet numquam earum? - James Aspey
+          </p>
+        </div>
+      </div>
       <div class="review">
         <img src="./img/head.png" alt="head" class="review__img" />
         <div class="review__text">
           <h3 class="subheading subheading--teritary mb-1">HumbleCompass changed my life</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusantium quaerat culpa
-            saepe incidunt distinctio deserunt voluptatibus eveniet numquam earum?
+            saepe incidunt distinctio deserunt voluptatibus eveniet numquam earum? - James Aspey
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section class="download">
+      <div class="download__left">
+        <div>
+          <h1 class="heading heading--secondary">Download HumbleCompass and get started today</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maiores exercitationem
+            eveniet est iste libero.
+          </p>
+        </div>
+        <div class="download__buttons">
+          <div>
+            <p>Get the App</p>
+            <img src="./img/google-play-badge.png" alt="google" />
+          </div>
+          <img src="./img/app-store-badge.svg" alt="apple" />
+        </div>
+      </div>
+      <div class="download__right">
+        <img src="./img/iphone-left.svg" alt="iphone-left" />
+        <img src="./img/iphone-right.png" alt="iphone-right" />
       </div>
     </section>
 

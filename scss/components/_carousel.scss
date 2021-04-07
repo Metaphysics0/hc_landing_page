@@ -1,0 +1,70 @@
+.carousel {
+  padding: 10px;
+  background: tomato;
+  &__child {
+    width: 358px;
+    height: 40px;
+    margin: 0 auto;
+    border-top: 1px dotted grey;
+    border-bottom: 1px dotted grey;
+    padding: 1.75rem 0;
+    display: flex;
+    justify-content: space-around;
+    ul {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      border: 1px solid black;
+      margin: 0;
+      height: 40px;
+      overflow: hidden;
+      li {
+        position: absolute;
+        background: white;
+        margin-right: -4px;
+        div {
+          width: 60px;
+          height: 40px;
+          display: inline-block;
+          text-align: center;
+          line-height: 40px;
+          margin-right: -4px;
+        }
+      }
+    }
+  }
+}
+.one {
+  animation: loop 4s linear infinite;
+}
+.two {
+  animation: looptwo 8s linear infinite;
+}
+@keyframes loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-100%, 0);
+  }
+  50.1% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes looptwo {
+  0% {
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(-100%, 0);
+  }
+  50.1% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

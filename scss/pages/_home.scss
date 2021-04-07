@@ -12,9 +12,10 @@
   &__center {
     grid-area: hero-center;
     svg {
+      width: 66%;
       position: absolute;
-      top: 40px;
-      left: 0;
+      top: 69px;
+      left: 319px;
       z-index: -999;
     }
   }
@@ -45,6 +46,12 @@
     &__right {
       display: none;
     }
+    &__center {
+      svg {
+        // left: 400px;
+        top: 100px;
+      }
+    }
   }
 }
 @media only screen and (max-width: 55em) {
@@ -56,6 +63,21 @@
       'hero-center';
     &__left {
       text-align: center;
+    }
+    &__center {
+      svg {
+        left: 30px;
+        top: 400px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  .hero {
+    &__center {
+      svg {
+        top: 650px;
+      }
     }
   }
 }
@@ -83,19 +105,37 @@
       padding: 0 4rem;
     }
   }
+  @media only screen and (max-width: 77em) {
+    // flex-direction: column;
+    // padding-top: 10rem;
+    &__left {
+      display: none;
+    }
+    &__right {
+      flex-direction: column;
+      article {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 0;
+      }
+    }
+  }
 }
 
 // ########## FEATURES SECTION ##########
 .features {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 0 15rem 0;
   @include calc-5;
   &__cards {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 10rem;
     article {
       text-align: center;
       padding: 2rem;
-      width: 17%;
+      width: 24.5%;
       border: 2px solid #d7cebf;
       border-radius: 15px;
       box-shadow: var(--shadow-dreamy);
@@ -103,45 +143,90 @@
         font-size: 4rem;
         margin-bottom: 2rem;
         &.plant {
-          color: green;
+          color: #6d8a8c;
         }
         &.compass {
-          color: blue;
+          color: #8e422a;
         }
         &.utensils {
-          color: orange;
+          color: #e9ab2b;
         }
+      }
+    }
+    @media only screen and (max-width: 77em) {
+      flex-direction: column;
+      article {
+        width: 100%;
+        margin-bottom: 2rem;
       }
     }
   }
 }
 
-// REVIEWS
+// ################### REVIEWS ###################
 .reviews {
   padding: 10rem 0;
 }
 
 .review {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   transform: skew(-12deg);
-  padding: 6rem;
+  padding: 5rem;
   width: 50%;
   box-shadow: var(--shadow-dreamy);
+  align-items: center;
   &__img {
-    // width: 12%;
+    width: 17%;
+    height: 17%;
     border-radius: 50%;
-    transform: skew(12deg);
+    transform: translateX(-3rem) skew(12deg);
     border: 2px solid yellow;
     box-shadow: var(--shadow-diffuse);
-    // margin: 1rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
   }
   &__text {
     transform: skew(12deg);
     p {
-      font-size: 1.25rem;
+      line-height: 1.5;
+      font-size: 1.55rem;
     }
+  }
+  @media only screen and (max-width: 77em) {
+    transform: none;
+    width: 90%;
+    &__img,
+    &__text {
+      transform: none;
+    }
+  }
+  @media only screen and (max-width: 55em) {
+    width: 100%;
+  }
+}
+
+// ################ Download ################
+.download {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'download-left download-right';
+  &__left {
+    grid-area: download-left;
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__buttons {
+    > div {
+      display: flex;
+    }
+  }
+  &__right {
+    grid-area: download-right;
+    display: flex;
   }
 }

@@ -1,12 +1,25 @@
+// Remove default inline styles for svg animation
 const find = document.querySelectorAll('#lottie > svg')[0];
+find.removeAttribute('height');
+find.removeAttribute('width');
+find.removeAttribute('style');
 
-function setAttributes(el, attrs) {
-  for (var key in attrs) {
-    el.setAttribute(key, attrs[key]);
-  }
-}
+// JAVASCRIPT SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-// setAttributes(find, {
-//   viewBox: '250 100 1800 2550',
-//   style: 'width: 200%; height: 147%; transform: translate3d(-165px, 0px, 0px);',
-// });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
+
+// Alert Easter Egg!
+window.onload = function () {
+  const form = document.getElementById('navSearch');
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    alert('I hate you! 😠');
+  };
+};

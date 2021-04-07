@@ -19,6 +19,24 @@
           color: #e9ab2b;
         }
       }
+      &:last-child {
+        display: inline-block;
+        border: 1px solid rgb(255, 197, 115);
+        border-radius: 10rem;
+        padding: 0.45rem 0.75rem;
+        font-weight: 800;
+        background: rgb(254, 228, 192);
+        background: linear-gradient(319deg, rgba(254, 228, 192, 1) 0%, rgba(255, 216, 146, 1) 100%);
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-dreamy);
+          a {
+            color: inherit;
+          }
+        }
+      }
     }
   }
   &__logo {
@@ -50,6 +68,11 @@
   .nav {
     &__search {
       display: none;
+    }
+    ul li {
+      &:nth-child(-n + 3) {
+        display: none;
+      }
     }
   }
 }

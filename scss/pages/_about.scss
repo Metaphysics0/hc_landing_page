@@ -20,4 +20,19 @@
   div {
     margin-bottom: 2rem;
   }
+  @media only screen and (max-width: 77em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 1fr;
+    grid-template-areas:
+      'about-top'
+      'about-right'
+      'about-left';
+    &__left {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  // @media only screen and (max-width: 36.5em) {
+  // }
 }

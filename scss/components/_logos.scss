@@ -1,0 +1,12 @@
+// Logo images section
+.logos {
+  border-top: 1px dotted grey;
+  border-bottom: 1px dotted grey;
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-around;
+  img {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+}
