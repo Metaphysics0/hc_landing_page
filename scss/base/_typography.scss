@@ -3,6 +3,10 @@
   line-height: 1.08;
   font-family: 'Flink Black', sans-serif;
   font-size: 9rem;
+  @include respond(phone) {
+    font-size: 7rem;
+    line-height: 1.25;
+  }
   &--secondary {
     font-size: 6rem;
     font-weight: 700;

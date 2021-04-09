@@ -3,14 +3,25 @@
   justify-content: space-between;
   margin-bottom: 5rem;
   z-index: 999;
+  @include respond(tab-port) {
+    padding: 1rem 1.25rem;
+  }
   ul {
     list-style: none;
     display: flex;
     align-items: center;
     margin-right: 20rem;
+    @include respond(tab-land) {
+      margin-right: 0;
+    }
     li {
       margin: 0 2.75rem;
       font-size: 1.65rem;
+      &:nth-child(-n + 3) {
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
       a {
         text-decoration: none;
         color: #767169;
@@ -54,30 +65,14 @@
     &:focus {
       box-shadow: var(--shadow-shorter);
     }
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 }
 
-@media only screen and (max-width: 77em) {
-  .nav {
-    ul {
-      margin-right: 0;
-    }
-  }
-}
-@media only screen and (max-width: 55em) {
-  .nav {
-    padding: 1rem 1.25rem;
-    &__search {
-      display: none;
-    }
-    ul li {
-      margin: 0;
-      &:nth-child(-n + 3) {
-        display: none;
-      }
-    }
-  }
-  .input-icon {
+.input-icon {
+  @include respond(tab-port) {
     display: none;
   }
 }

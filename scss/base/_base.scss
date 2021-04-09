@@ -10,6 +10,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 55%;
+  }
 }
 body {
   font-family: 'Flink Regular', 'Flink Medium', 'Flink Thin', 'Flink Bold', 'Flink ExtraBold',
@@ -17,23 +20,15 @@ body {
     'Helvetica Neue', sans-serif;
   background: #fffaf1;
   padding: 5rem 7rem;
+  @include respond(tab-land) {
+    padding: 3rem;
+  }
+  @include respond(phone) {
+    padding: 0;
+  }
 }
 
 ::selection {
   background-color: #e9ab2b;
   color: white;
-}
-
-@media only screen and (max-width: 77em) {
-  html {
-    font-size: 55%;
-  }
-  body {
-    padding: 3rem;
-  }
-}
-@media only screen and (max-width: 36.5em) {
-  body {
-    padding: 0;
-  }
 }
