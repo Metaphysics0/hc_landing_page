@@ -66,13 +66,18 @@
 }
 @media only screen and (max-width: 55em) {
   .nav {
+    padding: 1rem 1.25rem;
     &__search {
       display: none;
     }
     ul li {
+      margin: 0;
       &:nth-child(-n + 3) {
         display: none;
       }
     }
+  }
+  .input-icon {
+    display: none;
   }
 }

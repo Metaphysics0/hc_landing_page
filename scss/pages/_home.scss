@@ -12,10 +12,10 @@
   &__center {
     grid-area: hero-center;
     svg {
-      width: 66%;
+      width: 80%;
       position: absolute;
-      top: 69px;
-      left: 319px;
+      top: 20px;
+      left: 210px;
       z-index: -999;
     }
   }
@@ -48,7 +48,8 @@
     }
     &__center {
       svg {
-        // left: 400px;
+        // width: 75%;
+        // left: 300px;
         top: 100px;
       }
     }
@@ -76,7 +77,9 @@
   .hero {
     &__center {
       svg {
-        top: 650px;
+        left: 0px;
+        top: 515px;
+        width: 100%;
       }
     }
   }
@@ -215,18 +218,31 @@
   grid-template-areas: 'download-left download-right';
   &__left {
     grid-area: download-left;
-    > div {
+    > article {
       display: flex;
       flex-direction: column;
-    }
-  }
-  &__buttons {
-    > div {
-      display: flex;
     }
   }
   &__right {
     grid-area: download-right;
     display: flex;
+    img {
+      max-width: 10rem;
+    }
+    @media only screen and (max-width: 36.5em) {
+      img:last-child {
+        display: none;
+      }
+    }
+  }
+}
+.btn-wrap {
+  display: flex;
+  img {
+    max-width: 10rem;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
   }
 }
