@@ -108,6 +108,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 36.5em) {
+  html {
+    font-size: 52.5%;
+  }
+}
+
 body {
   font-family: 'Flink Regular', 'Flink Medium', 'Flink Thin', 'Flink Bold', 'Flink ExtraBold', 'Flink Black', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #fffaf1;
@@ -685,6 +691,13 @@ body {
   border-bottom: 1px solid #4e747a;
   text-decoration: none;
   color: #4e747a;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hero__right a:hover {
+  color: #e9ab2b;
+  border-bottom: 1px solid #e9ab2b;
 }
 
 .article {
@@ -859,6 +872,8 @@ body {
 
 .reviews {
   padding: 10rem 0;
+  background: inherit;
+  z-index: 99;
 }
 
 @media only screen and (max-width: 36.5em) {
@@ -939,6 +954,15 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: download-left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .download__left > article {
@@ -958,10 +982,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .download__right img {
-  max-width: 10rem;
+  max-width: 20rem;
+}
+
+.download__right img:first-child {
+  position: absolute;
+  bottom: 20px;
+  z-index: -9;
+}
+
+.download__right img:last-child {
+  margin-left: auto;
+  max-width: 35rem;
 }
 
 @media only screen and (max-width: 36.5em) {
@@ -970,14 +1006,24 @@ body {
   }
 }
 
+.download__right .app-btn {
+  max-width: 25rem;
+}
+
 .btn-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .btn-wrap img {
-  max-width: 10rem;
+  max-width: 20rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .btn-wrap__left {

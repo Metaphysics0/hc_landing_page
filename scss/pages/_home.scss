@@ -65,6 +65,11 @@
       border-bottom: 1px solid #4e747a;
       text-decoration: none;
       color: #4e747a;
+      transition: all 0.3s;
+      &:hover {
+        color: #e9ab2b;
+        border-bottom: 1px solid #e9ab2b;
+      }
     }
   }
 }
@@ -170,6 +175,8 @@
 // ################### REVIEWS ###################
 .reviews {
   padding: 10rem 0;
+  background: inherit;
+  z-index: 99;
   @include respond(phone) {
     @include calc-5;
   }
@@ -222,6 +229,9 @@
   grid-template-areas: 'download-left download-right';
   &__left {
     grid-area: download-left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     > article {
       display: flex;
       flex-direction: column;
@@ -230,20 +240,33 @@
   &__right {
     grid-area: download-right;
     display: flex;
+    position: relative;
     img {
-      max-width: 10rem;
-    }
-    @media only screen and (max-width: 36.5em) {
-      img:last-child {
-        display: none;
+      max-width: 20rem;
+      &:first-child {
+        position: absolute;
+        bottom: 20px;
+        z-index: -9;
       }
+      &:last-child {
+        margin-left: auto;
+        max-width: 35rem;
+        @include respond(phone) {
+          display: none;
+        }
+      }
+    }
+    .app-btn {
+      max-width: 25rem;
     }
   }
 }
 .btn-wrap {
   display: flex;
+  align-items: flex-end;
   img {
-    max-width: 10rem;
+    max-width: 20rem;
+    height: fit-content;
   }
   &__left {
     display: flex;

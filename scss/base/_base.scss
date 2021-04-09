@@ -9,9 +9,12 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem == 16px
   @include respond(tab-land) {
     font-size: 55%;
+  }
+  @include respond(phone) {
+    font-size: 52.5%;
   }
 }
 body {
