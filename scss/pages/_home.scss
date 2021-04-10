@@ -21,6 +21,7 @@
     z-index: 999;
     @include respond(tab-port) {
       text-align: center;
+      padding: 1.25rem;
     }
   }
   &__center {
@@ -35,7 +36,7 @@
         top: 100px;
       }
       @include respond(tab-port) {
-        left: 30px;
+        left: 90px;
         top: 400px;
       }
       @include respond(phone) {
@@ -225,8 +226,13 @@
 // ################ Download ################
 .download {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.75fr 1fr;
   grid-template-areas: 'download-left download-right';
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'download-left';
+    padding: 3rem;
+  }
   &__left {
     grid-area: download-left;
     display: flex;
@@ -250,14 +256,11 @@
       }
       &:last-child {
         margin-left: auto;
-        max-width: 35rem;
+        max-width: 28rem;
         @include respond(phone) {
           display: none;
         }
       }
-    }
-    .app-btn {
-      max-width: 25rem;
     }
   }
 }
@@ -271,5 +274,9 @@
   &__left {
     display: flex;
     flex-direction: column;
+  }
+  .app-btn {
+    max-width: 25rem;
+    height: 6rem;
   }
 }

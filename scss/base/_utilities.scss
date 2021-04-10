@@ -50,6 +50,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+// Search icon
 .input-icon {
   position: relative;
   i {
@@ -62,6 +63,9 @@
     transition: all 0.3s;
     &:hover {
       color: black;
+    }
+    @include respond(phone) {
+      display: none;
     }
   }
 }

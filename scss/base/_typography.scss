@@ -10,6 +10,10 @@
   &--secondary {
     font-size: 6rem;
     font-weight: 700;
+    @include respond(phone) {
+      font-size: 5.5rem;
+      text-align: center;
+    }
   }
   &--features {
     font-size: 4rem;
@@ -57,4 +61,7 @@
   font-size: 1.75rem;
   color: #767169;
   font-weight: 500;
+}
+.txt-ctr {
+  text-align: center;
 }

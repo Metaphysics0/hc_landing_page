@@ -20,6 +20,6 @@ window.onload = function () {
   const form = document.getElementById('navSearch');
   form.onsubmit = function (e) {
     e.preventDefault();
-    alert('I hate you! 😠');
+    alert('Christy is the worst!');
   };
 };

@@ -6,6 +6,9 @@
   @include respond(tab-port) {
     padding: 1rem 1.25rem;
   }
+  @include respond(phone) {
+    padding: 1rem 2rem;
+  }
   ul {
     list-style: none;
     display: flex;
@@ -30,6 +33,7 @@
           color: #e9ab2b;
         }
       }
+      // 'Download' button
       &:last-child {
         display: inline-block;
         border: 1px solid rgb(255, 197, 115);
@@ -47,11 +51,17 @@
             color: inherit;
           }
         }
+        @include respond(phone) {
+          margin: 0;
+        }
       }
     }
   }
   &__logo {
     font-size: 3rem;
+    @include respond(phone) {
+      margin-right: auto;
+    }
   }
   &__search {
     border-radius: 100px;
@@ -66,13 +76,10 @@
       box-shadow: var(--shadow-shorter);
     }
     @include respond(tab-port) {
+      width: 25rem;
+    }
+    @include respond(phone) {
       display: none;
     }
-  }
-}
-
-.input-icon {
-  @include respond(tab-port) {
-    display: none;
   }
 }
