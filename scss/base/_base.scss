@@ -22,9 +22,10 @@ body {
     'Flink Black', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
   background: #fffaf1;
-  padding: 5rem 7rem;
+  // padding: 0 7rem 5rem 7rem;
   @include respond(tab-land) {
     padding: 3rem;
+    padding: 0;
   }
   @include respond(phone) {
     padding: 0;

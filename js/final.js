@@ -26,10 +26,19 @@ window.onload = function () {
 
 // Transparent Navbar
 const navbar = document.getElementById('navbar');
+let scrolled = false;
 window.onscroll = () => {
   if (window.pageYOffset > 100) {
     navbar.classList.remove('top');
+    if (!scrolled) {
+      navbar.style.transform = 'translateY(-100px)';
+    }
+    setTimeout(() => {
+      navbar.style.transform = 'translateY(0)';
+      scrolled = true;
+    }, 300);
   } else {
     navbar.classList.add('top');
+    scrolled = false;
   }
 };

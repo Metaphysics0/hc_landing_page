@@ -5,7 +5,9 @@
   grid-template-areas: 'hero-left hero-center hero-right';
   gap: 1rem;
   height: 90vh;
+  padding: 15rem 7rem 0 7rem;
   @include respond(tab-land) {
+    padding: 15rem 0 5rem 0;
     grid-template-columns: 2fr 2.75fr;
     grid-template-areas: 'hero-left hero-center';
   }
@@ -15,6 +17,9 @@
     grid-template-areas:
       'hero-left'
       'hero-center';
+  }
+  @include respond(phone) {
+    margin-bottom: 20rem;
   }
   &__left {
     grid-area: hero-left;
@@ -80,11 +85,12 @@
 .article {
   display: flex;
   justify-content: space-between;
-  padding: 5rem 0;
+  padding: 5rem 7rem;
   @include respond(tab-land) {
     justify-content: center;
   }
   @include respond(phone) {
+    padding: 5rem 0;
     display: none;
   }
   &__left {
@@ -137,7 +143,7 @@
 
 // ########## FEATURES SECTION ##########
 .features {
-  padding: 5rem 0 15rem 0;
+  padding: 15rem 0 2rem 0;
   @include calc-5;
   &__cards {
     display: flex;
@@ -234,12 +240,15 @@
 
 // ################ Download ################
 .download {
+  padding: 0 7rem;
   display: grid;
   grid-template-columns: 1.75fr 1fr;
   grid-template-areas: 'download-left download-right';
   @include respond(phone) {
     grid-template-columns: 1fr;
-    grid-template-areas: 'download-left';
+    grid-template-areas:
+      'download-left'
+      'download-right';
     padding: 3rem;
   }
   &__left {
@@ -263,7 +272,7 @@
     position: relative;
     img {
       max-width: 30rem;
-      margin-left: auto;
+      margin: 0 auto;
       // &:first-child {
       //   position: absolute;
       //   bottom: 20px;

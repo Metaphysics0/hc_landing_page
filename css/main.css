@@ -117,12 +117,12 @@ html {
 body {
   font-family: 'Flink Regular', 'Flink Medium', 'Flink Thin', 'Flink Bold', 'Flink ExtraBold', 'Flink Black', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #fffaf1;
-  padding: 5rem 7rem;
 }
 
 @media only screen and (max-width: 75em) {
   body {
     padding: 3rem;
+    padding: 0;
   }
 }
 
@@ -334,6 +334,21 @@ body {
           justify-content: space-between;
   margin-bottom: 5rem;
   z-index: 999;
+  height: 10rem;
+  padding: 0 7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f9e6c6;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 99999;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav.top {
   background-color: transparent;
 }
 
@@ -420,6 +435,7 @@ body {
 
 .nav__logo {
   font-size: 3rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 36.5em) {
@@ -466,12 +482,20 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: 1.5rem;
+  text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .btn--hero:hover {
   background: #e9ab2b;
+}
+
+@media only screen and (max-width: 36.5em) {
+  .btn--hero {
+    padding: 1.75rem 2.5rem;
+    font-size: 1.75rem;
+  }
 }
 
 .logos {
@@ -634,10 +658,12 @@ body {
       grid-template-areas: 'hero-left hero-center hero-right';
   gap: 1rem;
   height: 90vh;
+  padding: 15rem 7rem 0 7rem;
 }
 
 @media only screen and (max-width: 75em) {
   .hero {
+    padding: 15rem 0 5rem 0;
     -ms-grid-columns: 2fr 2.75fr;
         grid-template-columns: 2fr 2.75fr;
         grid-template-areas: 'hero-left hero-center';
@@ -651,6 +677,12 @@ body {
     -ms-grid-rows: 1.5fr 3fr;
         grid-template-rows: 1.5fr 3fr;
         grid-template-areas: 'hero-left' 'hero-center';
+  }
+}
+
+@media only screen and (max-width: 36.5em) {
+  .hero {
+    margin-bottom: 20rem;
   }
 }
 
@@ -757,7 +789,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5rem 0;
+  padding: 5rem 7rem;
 }
 
 @media only screen and (max-width: 75em) {
@@ -770,6 +802,7 @@ body {
 
 @media only screen and (max-width: 36.5em) {
   .article {
+    padding: 5rem 0;
     display: none;
   }
 }
@@ -862,7 +895,7 @@ body {
 }
 
 .features {
-  padding: 5rem 0 15rem 0;
+  padding: 15rem 0 2rem 0;
   width: calc(100% - 5rem);
   margin-left: auto;
   margin-right: auto;
@@ -1007,6 +1040,7 @@ body {
 }
 
 .download {
+  padding: 0 7rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1.75fr 1fr;
@@ -1018,7 +1052,7 @@ body {
   .download {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: 'download-left';
+        grid-template-areas: 'download-left' 'download-right';
     padding: 3rem;
   }
 }
@@ -1066,7 +1100,7 @@ body {
 
 .download__right img {
   max-width: 30rem;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .btn-wrap {
@@ -1130,7 +1164,7 @@ body {
   -ms-grid-rows: 0.2fr 1fr;
       grid-template-rows: 0.2fr 1fr;
       grid-template-areas: 'about-top about-top' 'about-left about-right';
-  padding: 10rem 0;
+  padding: 10rem 0 5rem 0;
 }
 
 @media only screen and (max-width: 75em) {
