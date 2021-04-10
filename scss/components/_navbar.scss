@@ -3,6 +3,7 @@
   justify-content: space-between;
   margin-bottom: 5rem;
   z-index: 999;
+  background-color: transparent;
   @include respond(tab-port) {
     padding: 1rem 1.25rem;
   }

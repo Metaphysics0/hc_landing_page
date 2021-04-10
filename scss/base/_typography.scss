@@ -42,6 +42,13 @@
     line-height: 1.2;
     margin-bottom: 1.75rem;
   }
+  &--phone {
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+    @include respond(phone) {
+      display: none;
+    }
+  }
   &--card {
     font-size: 2rem;
     font-weight: 600;
