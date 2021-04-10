@@ -246,6 +246,7 @@
   grid-template-areas: 'download-left download-right';
   @include respond(phone) {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.25fr;
     grid-template-areas:
       'download-left'
       'download-right';
@@ -273,18 +274,6 @@
     img {
       max-width: 30rem;
       margin: 0 auto;
-      // &:first-child {
-      //   position: absolute;
-      //   bottom: 20px;
-      //   z-index: -9;
-      // }
-      // &:last-child {
-      //   margin-left: auto;
-      //   max-width: 28rem;
-      //   @include respond(phone) {
-      //     display: none;
-      //   }
-      // }
     }
   }
 }

@@ -1052,6 +1052,8 @@ body {
   .download {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.25fr;
+        grid-template-rows: 1fr 1.25fr;
         grid-template-areas: 'download-left' 'download-right';
     padding: 3rem;
   }
