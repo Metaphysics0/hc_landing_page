@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem == 16px
+  text-size-adjust: none;
   @include respond(tab-land) {
     font-size: 55%;
   }
