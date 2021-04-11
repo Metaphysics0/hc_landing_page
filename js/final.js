@@ -19,8 +19,12 @@ window.onload = function () {
   const form = document.getElementById('navSearch');
   form.onsubmit = function (e) {
     e.preventDefault();
-    alert('Christy is the worst!');
+    alert('I love you!!');
   };
+  const downloadBtn = document.getElementById('downloadBtn');
+  downloadBtn.addEventListener('click', () => {
+    alert('Rachel is the best ❤️');
+  });
 };
 
 // Transparent Navbar + bounce effect
