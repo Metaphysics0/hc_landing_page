@@ -58,6 +58,16 @@
     font-size: 2.75rem;
   }
 }
+.logo {
+  font-size: 3.5rem;
+  &--white {
+    color: #fff;
+  }
+  &--secondary {
+    color: white;
+    font-size: 3rem;
+  }
+}
 .number-text {
   font-family: 'Share Tech Mono', monospace;
   font-size: 7.25rem;

@@ -8,7 +8,6 @@ find.removeAttribute('style');
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
     });
@@ -24,7 +23,7 @@ window.onload = function () {
   };
 };
 
-// Transparent Navbar
+// Transparent Navbar + bounce effect
 const navbar = document.getElementById('navbar');
 let scrolled = false;
 window.onscroll = () => {

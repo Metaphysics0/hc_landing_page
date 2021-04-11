@@ -1,7 +1,6 @@
 .btn {
   &--hero {
-    padding: 1.75rem 2rem;
-    width: 17rem;
+    padding: 1.75rem 3rem;
     background: #000000;
     color: #fff;
     border: none;
@@ -11,6 +10,7 @@
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
+    text-align: center;
     &:hover {
       background: #e9ab2b;
     }

@@ -31,6 +31,9 @@
     }
     img {
       width: 100%;
+      @include respond(tab-land) {
+        width: 70%;
+      }
     }
   }
   &__right {
