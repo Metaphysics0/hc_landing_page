@@ -177,6 +177,12 @@ body {
   font-size: 4rem;
 }
 
+@media only screen and (max-width: 36.5em) {
+  .heading--features {
+    text-align: center;
+  }
+}
+
 .subheading {
   font-weight: 500;
   color: #767169;
@@ -1104,8 +1110,8 @@ body {
   .download {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: minmax(430px, 1fr) minmax(450px, 1.25fr);
-        grid-template-rows: minmax(430px, 1fr) minmax(450px, 1.25fr);
+    -ms-grid-rows: 430px 450px;
+        grid-template-rows: 430px 450px;
         grid-template-areas: 'download-left' 'download-right';
     padding: 3rem;
   }
@@ -1162,9 +1168,6 @@ body {
 
 .download__right img {
   max-width: 30rem;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
   margin: 0 auto;
 }
 
