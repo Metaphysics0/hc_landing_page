@@ -290,7 +290,6 @@
       margin: 0 auto;
       @include respond(phone) {
         max-width: 35rem;
-        height: 80%;
       }
     }
   }
