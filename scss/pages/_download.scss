@@ -1,0 +1,75 @@
+// ################ Download ################
+.download {
+  padding: 0 7rem 7rem 7rem;
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+  grid-template-areas: 'download-left download-right';
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(430px, 1fr) 450px;
+    grid-template-areas:
+      'download-left'
+      'download-right';
+    padding: 3rem;
+  }
+  &__left {
+    grid-area: download-left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    > article {
+      display: flex;
+      flex-direction: column;
+    }
+    .p-text {
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &__right {
+    grid-area: download-right;
+    display: flex;
+    position: relative;
+    @include respond(phone) {
+      align-items: center;
+    }
+    img {
+      max-width: 30rem;
+      margin: 0 auto;
+      @include respond(phone) {
+        max-width: 35rem;
+      }
+    }
+  }
+}
+.btn-wrap {
+  display: flex;
+  align-items: flex-end;
+  @include respond(phone) {
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  img {
+    max-width: 20rem;
+    height: 5rem;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  .google-btn {
+    @include respond(phone) {
+      max-width: 16rem;
+    }
+  }
+  .app-btn {
+    max-width: 25rem;
+    height: 6rem;
+    @include respond(phone) {
+      max-width: 14rem;
+      height: min-content;
+    }
+  }
+}

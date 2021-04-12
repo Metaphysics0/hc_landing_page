@@ -1,0 +1,149 @@
+// #################### HERO SECTION ####################
+.hero {
+  display: grid;
+  grid-template-columns: 3.25fr 6fr 2fr;
+  grid-template-areas: 'hero-left hero-center hero-right';
+  gap: 1rem;
+  height: 90vh;
+  padding: 15rem 7rem 0 7rem;
+  position: relative;
+  @include respond(big-desktop) {
+    margin-bottom: 25rem;
+  }
+  @include respond(tab-land) {
+    padding: 15rem 5rem 5rem 5rem;
+    grid-template-columns: 2fr 2.75fr;
+    grid-template-areas: 'hero-left hero-center';
+  }
+  @include respond(tab-port) {
+    padding: 15rem 0 5rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr minmax(300px, 3fr);
+    grid-template-areas:
+      'hero-left'
+      'hero-center';
+  }
+  @include respond(phone) {
+    margin-bottom: 20rem;
+  }
+  &__left {
+    grid-area: hero-left;
+    z-index: 999;
+    @include respond(tab-port) {
+      text-align: center;
+      padding: 1.25rem;
+    }
+  }
+  &__center {
+    grid-area: hero-center;
+    svg {
+      width: 80%;
+      position: absolute;
+      top: 20px;
+      left: 210px;
+      @include respond(big-desktop) {
+        width: 70%;
+      }
+      @include respond(tab-land) {
+        top: 100px;
+      }
+      @include respond(tab-port) {
+        left: 76px;
+        top: 425px;
+      }
+      @include respond(phone) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 30%);
+        width: 100%;
+      }
+    }
+  }
+  &__right {
+    grid-area: hero-right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond(tab-land) {
+      display: none;
+    }
+    img {
+      width: 15rem;
+      outline: none;
+      animation: spin 7s ease-in-out infinite;
+      margin-bottom: 7rem;
+    }
+    a {
+      font-size: 1.75rem;
+      font-weight: 600;
+      border-bottom: 1px solid #4e747a;
+      text-decoration: none;
+      color: #4e747a;
+      transition: all 0.3s;
+      &:hover {
+        color: #e9ab2b;
+        border-bottom: 1px solid #e9ab2b;
+      }
+    }
+  }
+}
+
+// ################ Sub Hero ################
+.article {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 7rem;
+  @include respond(tab-land) {
+    justify-content: center;
+  }
+  @include respond(phone) {
+    padding: 5rem 0;
+    display: none;
+  }
+  &__left {
+    width: 35%;
+    @include respond(tab-land) {
+      display: none;
+    }
+    img {
+      width: 10rem;
+      border: 2px solid white;
+      border-radius: 50%;
+      box-shadow: var(--shadow-dreamy);
+      margin-bottom: 2rem;
+    }
+  }
+  &__right {
+    display: flex;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+    article {
+      display: flex;
+      align-items: center;
+      padding: 0 4rem;
+      @include respond(tab-land) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 77em) {
+    &__left {
+      display: none;
+    }
+    &__right {
+      flex-direction: column;
+      article {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 0;
+      }
+    }
+  }
+}

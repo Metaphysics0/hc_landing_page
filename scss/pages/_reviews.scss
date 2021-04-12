@@ -1,0 +1,103 @@
+// ################### REVIEWS ###################
+.reviews {
+  padding: 10rem 0;
+  background: inherit;
+  z-index: 99;
+  @include respond(phone) {
+    @include calc-5;
+    padding: 10rem 0 6rem 0;
+  }
+}
+
+.review {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: skew(-12deg);
+  padding: 5rem;
+  width: 50%;
+  box-shadow: var(--shadow-dreamy);
+  align-items: center;
+  transition: all 0.3s;
+  @include respond(tab-land) {
+    padding: 4rem;
+  }
+  &__shape {
+    width: 11.5rem;
+    height: 11.5rem;
+    float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+    @include respond(tab-land) {
+      width: 10rem;
+      height: 10rem;
+      margin-right: 1rem;
+    }
+    &--red {
+      border: 2px solid red;
+    }
+    &--green {
+      border: 2px solid green;
+    }
+  }
+  &__img {
+    height: 100%;
+    transform: scale(1.1);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skew(12deg);
+    p {
+      line-height: 1.5;
+      font-size: 1.55rem;
+    }
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+  @media only screen and (max-width: 77em) {
+    transform: none;
+    width: 90%;
+    &__img,
+    &__text,
+    &__shape {
+      transform: none;
+    }
+  }
+  @media only screen and (max-width: 55em) {
+    width: 100%;
+  }
+}

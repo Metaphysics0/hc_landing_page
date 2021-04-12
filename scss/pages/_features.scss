@@ -1,0 +1,38 @@
+// ########## FEATURES SECTION ##########
+.features {
+  padding: 10rem 0 2rem 0;
+  @include calc-5;
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+    article {
+      text-align: center;
+      padding: 2rem;
+      width: 24.5%;
+      border: 2px solid #d7cebf;
+      border-radius: 15px;
+      box-shadow: var(--shadow-dreamy);
+      @include respond(tab-land) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      i {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        &.plant {
+          color: #6d8a8c;
+        }
+        &.compass {
+          color: #8e422a;
+        }
+        &.utensils {
+          color: #e9ab2b;
+        }
+      }
+    }
+  }
+}

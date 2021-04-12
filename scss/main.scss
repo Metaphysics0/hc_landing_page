@@ -43,9 +43,14 @@
 @import './components/button';
 @import './components/logos';
 @import './components/carousel';
-@import './components/glow';
+@import './components/wave';
+@import './components/story';
 
 @import './layout/grid';
 
-@import './pages/home';
+@import './pages/hero';
 @import './pages/about';
+@import './pages/features';
+@import './pages/reviews';
+@import './pages/download';
+@import './pages/footer';
