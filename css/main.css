@@ -87,18 +87,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-size: 62.5%;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
@@ -108,19 +103,25 @@ html {
 
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 9px;
+    font-size: 55%;
   }
 }
 
 @media only screen and (max-width: 36.5em) {
   html {
-    font-size: 8.5px;
+    font-size: 52.5%;
   }
 }
 
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Flink Regular', 'Flink Medium', 'Flink Thin', 'Flink Bold', 'Flink ExtraBold', 'Flink Black', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #fffaf1;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 @media only screen and (max-width: 75em) {
@@ -713,8 +714,8 @@ body {
     padding: 15rem 0 5rem 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1.5fr 3fr;
-        grid-template-rows: 1.5fr 3fr;
+    -ms-grid-rows: 1.5fr minmax(300px, 3fr);
+        grid-template-rows: 1.5fr minmax(300px, 3fr);
         grid-template-areas: 'hero-left' 'hero-center';
   }
 }
@@ -940,7 +941,7 @@ body {
 }
 
 .features {
-  padding: 15rem 0 2rem 0;
+  padding: 10rem 0 2rem 0;
   width: calc(100% - 5rem);
   margin-left: auto;
   margin-right: auto;
@@ -1103,8 +1104,8 @@ body {
   .download {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1.25fr;
-        grid-template-rows: 1fr 1.25fr;
+    -ms-grid-rows: minmax(430px, 1fr) minmax(450px, 1.25fr);
+        grid-template-rows: minmax(430px, 1fr) minmax(450px, 1.25fr);
         grid-template-areas: 'download-left' 'download-right';
     padding: 3rem;
   }
@@ -1187,6 +1188,9 @@ body {
   .btn-wrap {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 3rem;
   }
 }
@@ -1343,8 +1347,8 @@ body {
 @media only screen and (max-width: 36.5em) {
   .about {
     padding: 6.5rem 0 0 0;
-    -ms-grid-rows: 0.1fr 0.5fr 0.5fr;
-        grid-template-rows: 0.1fr 0.5fr 0.5fr;
+    -ms-grid-rows: 0.1fr 0.5fr minmax(300px, 0.5fr);
+        grid-template-rows: 0.1fr 0.5fr minmax(300px, 0.5fr);
   }
 }
 

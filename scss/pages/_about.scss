@@ -16,7 +16,7 @@
   }
   @include respond(phone) {
     padding: 6.5rem 0 0 0;
-    grid-template-rows: 0.1fr 0.5fr 0.5fr;
+    grid-template-rows: 0.1fr 0.5fr minmax(300px, 0.5fr);
   }
   &__top {
     grid-area: about-top;

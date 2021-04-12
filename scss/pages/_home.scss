@@ -17,7 +17,7 @@
   @include respond(tab-port) {
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 3fr;
+    grid-template-rows: 1.5fr minmax(300px, 3fr);
     grid-template-areas:
       'hero-left'
       'hero-center';
@@ -150,7 +150,7 @@
 
 // ########## FEATURES SECTION ##########
 .features {
-  padding: 15rem 0 2rem 0;
+  padding: 10rem 0 2rem 0;
   @include calc-5;
   &__cards {
     display: flex;
@@ -256,7 +256,7 @@
   grid-template-areas: 'download-left download-right';
   @include respond(phone) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.25fr;
+    grid-template-rows: minmax(430px, 1fr) minmax(450px, 1.25fr);
     grid-template-areas:
       'download-left'
       'download-right';
@@ -300,6 +300,7 @@
   align-items: flex-end;
   @include respond(phone) {
     justify-content: space-around;
+    align-items: center;
     margin-bottom: 3rem;
   }
   img {
