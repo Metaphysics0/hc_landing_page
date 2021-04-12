@@ -1199,9 +1199,7 @@ body {
 
 .btn-wrap img {
   max-width: 20rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 5rem;
 }
 
 .btn-wrap__left {
