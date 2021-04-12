@@ -1110,8 +1110,8 @@ body {
   .download {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 430px 450px;
-        grid-template-rows: 430px 450px;
+    -ms-grid-rows: minmax(430px, 1fr) 450px;
+        grid-template-rows: minmax(430px, 1fr) 450px;
         grid-template-areas: 'download-left' 'download-right';
     padding: 3rem;
   }
